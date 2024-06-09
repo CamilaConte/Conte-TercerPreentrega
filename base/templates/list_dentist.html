@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block page_title %}
+Our Dentists
+{% endblock page_title %}
+
+{% block h1_banner %}
+Dentists
+{% endblock h1_banner %}
+{% block p_banner %}{% endblock p_banner %}
+
+{% block div_section %}
+{% if dentists %}
+    <ul>    
+        {% for d in dentists %}
+        <li>{{d}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No dentists found.</p>
+{% endif %}
+{% endblock div_section %}
