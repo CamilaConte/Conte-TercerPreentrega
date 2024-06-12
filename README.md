@@ -1,4 +1,3 @@
-TODO: indicar el orden en que se prueban las cosas y/o donde estan las funcionalidades
 ## Dental Clinic
 The functionalities that can be found in this project are:
 ### List
