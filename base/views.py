@@ -1,15 +1,15 @@
 from django.shortcuts import redirect, render
 from base.models import Dentist
-from base.forms import FormCreateDentist
+from base.forms import CreateDentist
 
 def home(request):
     return render(request, 'index.html')
 
 def save_dentist(request):
-    form = FormCreateDentist()
+    form = CreateDentist()
     
     if request.method == 'POST':
-        form = FormCreateDentist(request.POST)
+        form = CreateDentist(request.POST)
         if form.is_valid():
             data = form.cleaned_data
             dentist = Dentist(tuition=data.get('tuition'), name=data.get('name'))
